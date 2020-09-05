@@ -37,7 +37,8 @@ def find_distance_bw_planes(a1,b1,c1,d1,a2,b2,c2,d2):
     if (a1/a2 == b1/b2 == c1/c2):
         #consider y1 = z1 = 0
         x1 = -d1/a1
-        distance = abs(a2*x1 + d2)/sqrt(a2*a2+b2*b2+c2*c2)
+        n = np.array([a2,b2,c2])
+        distance = abs(a2*x1 + d2)/np.linalg.norm(n)
     else:
         print("The given planes are not parallel")
         return -1
