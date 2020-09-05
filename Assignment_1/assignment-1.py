@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+#Program for plotting the two parallel planes
 a1,b1,c1,d1 = 2,3,4,4
 a2,b2,c2,d2 = 4,6,8,12
 
@@ -30,6 +31,7 @@ surf2 = ax.plot_surface(X, Y, Z2)
 plt.title('Assignment-1 : Parallel Planes')
 plt.show()
 
+#Program for finding the distance
 def find_distance_bw_planes(a1,b1,c1,d1,a2,b2,c2,d2):
     #To check if planes are parallel
     if (a1/a2 == b1/b2 == c1/c2):
