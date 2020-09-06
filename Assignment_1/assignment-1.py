@@ -1,6 +1,4 @@
-# Given two parallel planes P1: ax+ by + cz + d1 = 0 and P2: ax + by + cz + d2 = 0.
-# This is a program to find distance between these planes
-# Distance = (|d1 - d2|)/sqrt(a*a + b*b +c*c)
+# If the two planes are of the form n^T x = c_1 & n^T x = c_2, then the distance between them is given by : abs{c_1-c_2}/norm{vec{n}
 
 from math import sqrt
 import numpy as np
