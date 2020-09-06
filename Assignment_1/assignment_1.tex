@@ -11,26 +11,23 @@
  top=5mm,
  }
 \usepackage{graphicx}
+\usepackage{commath}
 \begin{document}
 \maketitle
 \section*{Question :}
 \large{Find the distance between the two planes
 (2 3 4)x = 4 and (4 6 8)x = 12}
 \section*{Solution :}
-\large{The given two planes are parallel as the perpendicular vectors of the planes (2 3 4) and (4 6 8) are proportional.}\\
+\large{If the two planes are of the form \( n^T x = c_1 \hspace{0.5cm}and \hspace{0.5cm} n^T x = c_2 \) , Then the distance between the planes is given by : }\\
 
-\Large{i.e, \( \frac{2}{4} \) = \( \frac{3}{6} \) = \( \frac{4}{8} \)}  \\ \\
-\large{Given two parallel planes P1:ax+by+cz+d1=0 and P2:ax+by+cz+d2=0, We can find the distance between these parallel planes using the formula : }\\
+\[\frac{\abs{c_1-c_2}}{\norm{\vec{n}}}\] \\ \\
 
-\[  \frac{\mid d1 - d2 \mid}{\sqrt{a^2 + b^2 + c^2}}  \] \\
+\large{So, the distance between the given planes is: }\\
 
-So, the distance between the planes is : \\
-
-\(  \frac{\mid 8 - 12 \mid}{\sqrt{16+36+64}}   = \frac{2}{\sqrt{29}}\)}\\ \\
+\large{\(\frac{\abs{4 - 6}}{\lVert [2 3 4]\rVert}   =   \frac{2}{\sqrt{29}}\)  } 
 
 \begin{center}
     \includegraphics[width = .6\textwidth]{parallel planes.png}
 \end{center}
 
-   
 \end{document}
