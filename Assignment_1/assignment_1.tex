@@ -158,26 +158,33 @@ https://github.com/Sairam13001/AI5006/blob/master/Assignment_1/assignment_1.tex
 %
 \section{Problem}
 Find the distance between the two planes
-(2 3 4)\( \Vec{x} \) = 4 and (4 6 8) \( \Vec{x} \) = 12
+(2 3 4)\( \vec{x} \) = 4 and (4 6 8) \( \vec{x} \) = 12
 \section{Explanation}
 If the two planes are of the form
-\begin{equation}
-   \ \Vec{n^T} \Vec{x} = c_1 \
-\end{equation} and  
-\begin{equation}
-    \ \Vec{n^T} \Vec{x} = c_2\
-\end{equation} Then the distance between the planes is given by : 
-\begin{equation}
-\frac{\abs{c_1-c_2}}{\norm{\vec{n}}}   
-\end{equation}
+\begin{align}
+    \ \vec{n^T} \vec{x} = c_1 \   
+\end{align}
+ and  
+\begin{align}
+     \ \vec{n^T} \vec{x} = c_2\   
+\end{align}
+Then the distance between the planes is given by : 
+\begin{align}
+  \frac{\abs{c_1-c_2}}{\norm{\vec{n}}}     
+\end{align}
+
 
 \section{Solution}
 So, the distance between the given planes is:
-\begin{equation*}
- \ \frac{\abs{4 - 6}}{\sqrt{2^2+3^2+4^2}}   =   \frac{2}{\sqrt{29}} \   
-\end{equation*}
+\begin{align}
+  \ \frac{\abs{4 - 6}}{\sqrt{2^2+3^2+4^2}}   =   \frac{2}{\sqrt{29}} \   
+\end{align}
+   
+\begin{figure}[t]
+    \centering
+    \includegraphics[width = \columnwidth]{parallel planes.png}
+    \caption{Example of Two parallel planes}
+    \label{fig:parallel_planes}
+\end{figure}
 
-\begin{center}
-\includegraphics[width = .6\textwidth]{parallel planes.png}
-\end{center}
 \end{document}
