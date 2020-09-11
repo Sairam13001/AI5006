@@ -158,20 +158,19 @@ https://github.com/Sairam13001/AI5006/blob/master/Assignment_2/assignment_2.tex
 %
 \section{Problem}
 If $\mbf{A}$  = $\begin{psmallmatrix} \cos{\alpha} & -\sin{\alpha}\\ \sin{\alpha} & \cos{\alpha} \end{psmallmatrix}$, and $\mbf{A}$ + $\mbf{A}^\top$ = $\mbf{I}$, then find the value of angle $\alpha$.
+
+
 \section{Explanation}
 \begin{description}
 
-  \item[$\ast$ ] The Complex number equivalent to the matrix $\begin{psmallmatrix} a & -b\\ b & a \end{psmallmatrix}$ is $\begin{psmallmatrix} a \\ b \end{psmallmatrix}$ or $a+ib$
+  \item[$\ast$ ] The Complex number equivalent to the matrix $\begin{psmallmatrix} a & -b\\ b & a \end{psmallmatrix}$ is $\begin{psmallmatrix} a \\ b \end{psmallmatrix}$
   \item[$\ast$ ]   So, If $\mbf{A}$  = $\begin{psmallmatrix} a \\ b \end{psmallmatrix}$, then transpose of $\mbf{A}$ = $\begin{psmallmatrix} a \\ -b \end{psmallmatrix}$
   \item[$\ast$ ]  And addition of $\mbf{A}$ with $\mbf{A}^\top$ results in  :
   
   \begin{align}
       \begin{psmallmatrix} a \\ b \end{psmallmatrix} + \begin{psmallmatrix} a \\ -b \end{psmallmatrix} = \begin{psmallmatrix} 2a \\ 0 \end{psmallmatrix} 
   \end{align}
-  Or 
-   \begin{align}
-      \brak{a + ib} + \brak{a - ib}  = 2a 
-  \end{align}
+  
 \end{description}
 
 \section{Solution}
@@ -197,7 +196,7 @@ As per the cosine values, the angle $\alpha$ is :
  \alpha =  \frac{\pi}{3} = 1.047
 \end{align}
   
-The cosine function is plotted along with the point (x, cos(x)) = (1.047, 0.5) as shown below:  
+The cosine function is plotted along with the point (x, cos(x)) = (1.047, 0.5) as shown in Fig. 0:  
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{assignment_2.png}
