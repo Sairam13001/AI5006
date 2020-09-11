@@ -161,39 +161,31 @@ If $\mbf{A}$  = $\begin{psmallmatrix} \cos{\alpha} & -\sin{\alpha}\\ \sin{\alpha
 \section{Explanation}
 \begin{description}
 
-  \item[$\ast$ ] If two matrices $\mbf{A}$ and $\mbf{B}$ are equal then the corresponding elements are equal.
-  \item[$\ast$ ]   Similarly, Addition of two matrices is addition of their corresponding elements.
-  \item[$\ast$ ]  If $\mbf{A}$  = $\begin{psmallmatrix} a & b\\ c & d \end{psmallmatrix}$, then transpose of $\mbf{A}$ is : 
+  \item[$\ast$ ] The Complex number equivalent to the matrix $\begin{psmallmatrix} a & -b\\ b & a \end{psmallmatrix}$ is $\begin{psmallmatrix} a \\ b \end{psmallmatrix}$ or $a+ib$
+  \item[$\ast$ ]   So, If $\mbf{A}$  = $\begin{psmallmatrix} a \\ b \end{psmallmatrix}$, then transpose of $\mbf{A}$ = $\begin{psmallmatrix} a \\ -b \end{psmallmatrix}$
+  \item[$\ast$ ]  And addition of $\mbf{A}$ with $\mbf{A}^\top$ results in  :
   
+  \begin{align}
+      \begin{psmallmatrix} a \\ b \end{psmallmatrix} + \begin{psmallmatrix} a \\ -b \end{psmallmatrix} = \begin{psmallmatrix} 2a \\ 0 \end{psmallmatrix} 
+  \end{align}
+  Or 
+   \begin{align}
+      \brak{a + ib} + \brak{a - ib}  = 2a 
+  \end{align}
 \end{description}
-  
-\begin{align}
-    \mbf{A}^\top = \begin{psmallmatrix} a & c\\ b & d \end{psmallmatrix}
-\end{align}
-
 
 \section{Solution}
 
 
-Given that, 
+So, According to the given question $\mbf{A}$ + $\mbf{A}^\top$ is : 
 \begin{align}
- \mbf{A}  = \begin{psmallmatrix} \cos{\alpha} & -\sin{\alpha}\\ \sin{\alpha} & \cos{\alpha} \end{psmallmatrix}.    
+   \begin{psmallmatrix} \cos{\alpha} \\ \sin{\alpha} \end{psmallmatrix} + \begin{psmallmatrix} \cos{\alpha} \\ -\sin{\alpha} \end{psmallmatrix} = \begin{psmallmatrix} 2\cos{\alpha} \\ 0 \end{psmallmatrix} 
 \end{align}
 
-So, the transpose of $\mbf{A}$ is :
+Given that  $\mbf{A}$ + $\mbf{A}^\top$ = $\mbf{I}$ :
 \begin{align}
- \mbf{A}^\top  = \begin{psmallmatrix} \cos{\alpha} & \sin{\alpha}\\ -\sin{\alpha} & \cos{\alpha} \end{psmallmatrix}.    
+  \begin{psmallmatrix} 2\cos{\alpha} \\ 0 \end{psmallmatrix} = \begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} 
 \end{align}
-
-Sum of Matrices $\mbf{A}$ and its Transpose $\mbf{A}^\top$ is :
-\begin{align}
- \mbf{A} + \mbf{A}^\top  = \begin{psmallmatrix} 2\cos{\alpha} & 0 \\ 0  & 2\cos{\alpha} \end{psmallmatrix}.    
-\end{align}
-
-Also given, $\mbf{A}$ + $\mbf{A}^\top$ = $\mbf{I}$, So :
-\begin{align}
-\begin{psmallmatrix} 2\cos{\alpha} & 0 \\ 0  & 2\cos{\alpha} \end{psmallmatrix} =  \begin{psmallmatrix} 1 & 0 \\ 0  & 1 \end{psmallmatrix}
-\end{align} 
 
 That Implies, 
 \begin{align}
@@ -205,7 +197,7 @@ As per the cosine values, the angle $\alpha$ is :
  \alpha =  \frac{\pi}{3} = 1.047
 \end{align}
   
-The cosine function is plotted along with the point (x, cos(x)) = (1.047, 0.5) as shown below:   
+The cosine function is plotted along with the point (x, cos(x)) = (1.047, 0.5) as shown below:  
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{assignment_2.png}
