@@ -157,33 +157,34 @@ https://github.com/Sairam13001/AI5006/blob/master/Assignment_2/assignment_2.tex
 \end{lstlisting}
 %
 \section{Problem}
-If $\mbf{A}$  = $\begin{psmallmatrix} \cos{\alpha} & -\sin{\alpha}\\ \sin{\alpha} & \cos{\alpha} \end{psmallmatrix}$, and $\mbf{A}$ + $\mbf{A}^\top$ = $\mbf{I}$, then find the value of angle $\alpha$.
+If $\vec{A}$  = $\myvec{ \cos{\alpha} & -\sin{\alpha}\\ \sin{\alpha} & \cos{\alpha}}$, and $\vec{A}$ + $\vec{A}^\top$ = $\vec{I}$, then find the value of angle $\alpha$.
 
 
 \section{Explanation}
-\begin{description}
 
-  \item[$\ast$ ] The Complex number equivalent to the matrix $\begin{psmallmatrix} a & -b\\ b & a \end{psmallmatrix}$ is $\begin{psmallmatrix} a \\ b \end{psmallmatrix}$
-  \item[$\ast$ ]   So, If $\mbf{A}$  = $\begin{psmallmatrix} a \\ b \end{psmallmatrix}$, then transpose of $\mbf{A}$ = $\begin{psmallmatrix} a \\ -b \end{psmallmatrix}$
-  \item[$\ast$ ]  And addition of $\mbf{A}$ with $\mbf{A}^\top$ results in  :
+The Complex number equivalent to the matrix $\myvec{a & -b\\ b & a }$ is $\myvec{a \\ b }$
+ 
+\begin{align}
+ \vec{A}  = \myvec{ a \\ b }\implies \vec{A}^\top = \myvec{a \\ -b}  
+\end{align}
+
+And addition of $\vec{A}$ with $\vec{A}^\top$ results in  :
   
-  \begin{align}
-      \begin{psmallmatrix} a \\ b \end{psmallmatrix} + \begin{psmallmatrix} a \\ -b \end{psmallmatrix} = \begin{psmallmatrix} 2a \\ 0 \end{psmallmatrix} 
-  \end{align}
-  
-\end{description}
+\begin{align}
+    \myvec{  a \\ b } + \myvec{ a \\ -b } = \myvec{ 2a \\ 0}
+\end{align}
 
 \section{Solution}
 
 
-So, According to the given question $\mbf{A}$ + $\mbf{A}^\top$ is : 
+So, According to the given question $\vec{A}$ + $\vec{A}^\top$ is : 
 \begin{align}
-   \begin{psmallmatrix} \cos{\alpha} \\ \sin{\alpha} \end{psmallmatrix} + \begin{psmallmatrix} \cos{\alpha} \\ -\sin{\alpha} \end{psmallmatrix} = \begin{psmallmatrix} 2\cos{\alpha} \\ 0 \end{psmallmatrix} 
+   \myvec{\cos{\alpha} \\ \sin{\alpha}} + \myvec{\cos{\alpha} \\ -\sin{\alpha}} = \myvec{ 2\cos{\alpha} \\ 0} 
 \end{align}
 
-Given that  $\mbf{A}$ + $\mbf{A}^\top$ = $\mbf{I}$ :
+Given that  $\vec{A}$ + $\vec{A}^\top$ = $\vec{I}$ :
 \begin{align}
-  \begin{psmallmatrix} 2\cos{\alpha} \\ 0 \end{psmallmatrix} = \begin{psmallmatrix} 1 \\ 0 \end{psmallmatrix} 
+  \myvec{2\cos{\alpha} \\ 0} = \myvec{ 1 \\ 0} 
 \end{align}
 
 That Implies, 
