@@ -185,36 +185,23 @@ Inverse of a matrix $\vec{A}$ is defined as  :
 \section{Solution}
 
 
-Square of the given matrix A is : 
-\begin{align}
-   \vec{A}^2  = \myvec{ 3 & 1\\ -1 & 2}  \myvec{ 3 & 1\\ -1 & 2} =   \myvec{ 8 & 5\\ -5 & 3} 
-\end{align}
+ 
+$\vec{A}^2$ - 5$\vec{A}$ + 7$\vec{I}$ 
+\begin{align*}
+&=  \myvec{ 8 & 5\\ -5 & 3} -  5\myvec{ 3 & 1\\ -1 & 2} + 7\myvec{ 1 & 0\\ 0 & 1}  \\
+&= \myvec{ 8 & 5\\ -5 & 3} -  \myvec{ 15 & 5\\ -5 & 10} + \myvec{ 7 & 0\\ 0 & 7}\\
+&= \myvec{ 8 & 5\\ -5 & 3} - \myvec{ 8 & 5\\ -5 & 3} = \myvec{ 0 & 0\\ 0 & 0} 
+\end{align*}
 
-$\vec{A}^2$ - 5$\vec{A}$ + 7$\vec{I}$ :
-\begin{align}
-  \myvec{ 8 & 5\\ -5 & 3} -  5\myvec{ 3 & 1\\ -1 & 2} + 7\myvec{ 1 & 0\\ 0 & 1}
-\end{align}
 
-\begin{align}
- =   \myvec{ 8 & 5\\ -5 & 3} -  \myvec{ 15 & 5\\ -5 & 10} + \myvec{ 7 & 0\\ 0 & 7}
-\end{align}
+Thus, It is proved that $\vec{A}^2 - 5\vec{A} + 7\vec{I} = 0$
 
+Multiplying above equation with $\Vec{A}^{-1}$ on both sides, We get :
 \begin{align}
- =   \myvec{ 8 & 5\\ -5 & 3} - \myvec{ 8 & 5\\ -5 & 3} = \myvec{ 0 & 0\\ 0 & 0} 
-\end{align}
-
-Thus, It is proved that
-
-\begin{align}
-\vec{A}^2 - 5\vec{A} + 7\vec{I} = 0.  
-\end{align}
-
-Multiplying equation \brak{3.0.5} with $\Vec{A}^{-1}$ on both sides, We get :
-\begin{align}
-\Vec{A}^{-1}\brak{\vec{A}^2 - 5\vec{A} + 7\vec{I}} &= 0.\Vec{A}^{-1} \\
-\implies \vec{A}^2.\Vec{A}^{-1} - 5\vec{A}.\Vec{A}^{-1} + 7\vec{I}.\Vec{A}^{-1} &= 0 \\
-\implies \vec{A}.\vec{A}.\Vec{A}^{-1} - 5\vec{I} + 7\Vec{A}^{-1} &= 0 \\
-\implies \vec{A}.\vec{I} - 5\vec{I} + 7\Vec{A}^{-1} &= 0\\
+\Vec{A}^{-1}\brak{\vec{A}^2 - 5\vec{A} + 7\vec{I}} &= 0\Vec{A}^{-1} \\
+\implies \vec{A}^2\Vec{A}^{-1} - 5\vec{A}\Vec{A}^{-1} + 7\vec{I}\Vec{A}^{-1} &= 0 \\
+\implies \vec{A}.\vec{A}\Vec{A}^{-1} - 5\vec{I} + 7\Vec{A}^{-1} &= 0 \\
+\implies \vec{A}\vec{I} - 5\vec{I} + 7\Vec{A}^{-1} &= 0\\
 \implies \Vec{A}^{-1} &= \frac{1}{7}\brak{5\vec{I} - \vec{A}}
 \end{align}
 
