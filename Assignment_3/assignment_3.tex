@@ -157,10 +157,10 @@ https://github.com/Sairam13001/AI5006/blob/master/Assignment_3/assignment_3.tex
 \end{lstlisting}
 %
 \section{Problem}
-\begin{align*}
+\begin{align}
    \vec{A}  = \myvec{ 3 & 1\\ -1 & 2}     
-\end{align*}
-Show that $\vec{A}^2$ - 5$\vec{A}$ + 7$\vec{I}$ = 0. Hence find $\Vec{A}^{-1}$.
+\end{align}
+Show that $\vec{A}^2$ - 5$\vec{A}$ + 7$\vec{I}$ = 0. Hence find $\vec{A}^{-1}$.
 
 
 \section{Explanation}
@@ -168,7 +168,7 @@ Show that $\vec{A}^2$ - 5$\vec{A}$ + 7$\vec{I}$ = 0. Hence find $\Vec{A}^{-1}$.
 Square of a matrix is the product of matrix with itself :
 
 \begin{align}
-\Vec{A}^2 = \vec{A}.\Vec{A}
+\vec{A}^2 = \vec{A}.\vec{A}
 \end{align}
 
 Product of a scalar with a matrix is the product of that scalar with every element of the matrix : 
@@ -186,29 +186,29 @@ Inverse of a matrix $\vec{A}$ is defined as  :
 
 
  
-$\vec{A}^2$ - 5$\vec{A}$ + 7$\vec{I}$ 
-\begin{align*}
-&=  \myvec{ 8 & 5\\ -5 & 3} -  5\myvec{ 3 & 1\\ -1 & 2} + 7\myvec{ 1 & 0\\ 0 & 1}  \\
+
+\begin{align}
+&   \vec{A}^2 - 5\vec{A} + 7\vec{I} \\
+&= \myvec{ 8 & 5\\ -5 & 3} -  5\myvec{ 3 & 1\\ -1 & 2} + 7\myvec{ 1 & 0\\ 0 & 1}  \\
 &= \myvec{ 8 & 5\\ -5 & 3} -  \myvec{ 15 & 5\\ -5 & 10} + \myvec{ 7 & 0\\ 0 & 7}\\
 &= \myvec{ 8 & 5\\ -5 & 3} - \myvec{ 8 & 5\\ -5 & 3} = \myvec{ 0 & 0\\ 0 & 0} 
-\end{align*}
+\end{align}
 
 
 Thus, It is proved that $\vec{A}^2 - 5\vec{A} + 7\vec{I} = 0$
 
-Multiplying above equation with $\Vec{A}^{-1}$ on both sides, We get :
+Multiplying above equation with $\vec{A}^{-1}$ on both sides, We get :
 \begin{align}
-\Vec{A}^{-1}\brak{\vec{A}^2 - 5\vec{A} + 7\vec{I}} &= 0\Vec{A}^{-1} \\
-\implies \vec{A}^2\Vec{A}^{-1} - 5\vec{A}\Vec{A}^{-1} + 7\vec{I}\Vec{A}^{-1} &= 0 \\
-\implies \vec{A}.\vec{A}\Vec{A}^{-1} - 5\vec{I} + 7\Vec{A}^{-1} &= 0 \\
-\implies \vec{A}\vec{I} - 5\vec{I} + 7\Vec{A}^{-1} &= 0\\
-\implies \Vec{A}^{-1} &= \frac{1}{7}\brak{5\vec{I} - \vec{A}}
+\implies \vec{A}^2\vec{A}^{-1} - 5\vec{A}\vec{A}^{-1} + 7\vec{I}\vec{A}^{-1} &= 0 \\
+\implies \vec{A}.\vec{A}\vec{A}^{-1} - 5\vec{I} + 7\vec{A}^{-1} &= 0 \\
+\implies \vec{A}\vec{I} - 5\vec{I} + 7\vec{A}^{-1} &= 0\\
+\implies \vec{A}^{-1} &= \frac{1}{7}\brak{5\vec{I} - \vec{A}}
 \end{align}
 
-Solving for $\Vec{A}^{-1}$, we get :
+Solving for $\vec{A}^{-1}$, we get :
 \begin{align}
-    \Vec{A}^{-1} &= \frac{1}{7}\brak{5\myvec{ 1 & 0\\ 0 & 1} - \myvec{ 3 & 1\\ -1 & 2}} \\
-    \implies \Vec{A}^{-1} &= \frac{1}{7}\brak{\myvec{ 2 & -1\\ 1 & 3}}
+    \vec{A}^{-1} &= \frac{1}{7}\brak{5\myvec{ 1 & 0\\ 0 & 1} - \myvec{ 3 & 1\\ -1 & 2}} \\
+    \implies \vec{A}^{-1} &= \frac{1}{7}\brak{\myvec{ 2 & -1\\ 1 & 3}}
 \end{align}
 
 \end{document}
