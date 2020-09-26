@@ -165,7 +165,7 @@ columns=fullflexible
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \begin{abstract}
-This document uses the concepts of Inner product and Cosines in proving a statement.
+This document uses the concepts of Median and Right angled triangles in proving a statement.
 \end{abstract}
 Download Python code from 
 %
@@ -181,56 +181,55 @@ https://github.com/Sairam13001/AI5006/blob/master/Assignment_4/assignment_4.tex
 %
 
 \section{Problem}
-$D$ is a point on side $BC$ of a $\triangle ABC$ such that $\frac{BD}{CD} =  \frac{AB}{AC}$. Prove that $AD$ is the bisector of $\angle BAC$ 
+$AD$ is a median of a $\triangle ABC$ and $AM \perp BC$. Prove that 
+\begin{align}
+    AC^2 = AD^2 + \brak{BC}\brak{DM} + \brak{\frac{BC}{2}}^2
+\end{align}
 
 \section{Explanation}
 
-If cosines of two angles are equal and those angles are less than 180\degree , then we can say that the angles are also equal.
-
+In a right angled triangle, square of hypotenuse is equal to sum of squares of the other two sides. Also, a median divides a side into two equal halves.
 
 \section{Solution}
 
 \begin{figure}[!ht]
 \centering
-\resizebox{\columnwidth}{!}{\input{assignment_4_fig}}
-\caption{$\triangle{ABC}$ with $D$ as a point on side $BC$}
+\resizebox{\columnwidth}{!}{\input{Assignment_4_figure}}
+\caption{$\triangle{ABC}$ with $AD$ as median and $AM \perp BC$}
 \label{fig:triangle}
 \end{figure}
 
-
-See Fig. \ref{fig:triangle}, It is given that :
-\begin{align}\label{givencond}
-  \frac{\norm{\vec{B-D}}}{\norm{\vec{C-D}}} =  \frac{\norm{\vec{A-B}}}{\norm{\vec{A-C}}}
+See Fig.\ref{fig:triangle}, It is given that :
+\begin{align}\label{given}
+  \norm{\vec{B-D}} = \norm{\vec{D-C}}\\
+  AM \perp BC
 \end{align}
-Re-writing the above equation we get :
-\begin{align}\label{giveneqnedited}
-  \frac{\norm{\vec{A-C}}}{\norm{\vec{A-B}}} =  \frac{\norm{\vec{C-D}}}{\norm{\vec{B-D}}}
+We have to prove that :
+\begin{align}\label{toprove}
+  \norm{\vec{A-C}}^2 = \norm{\vec{A-D}}^2 + \norm{\vec{B-C}}\norm{\vec{D-M}} + \norm{\frac{\vec{B-C}}{2}}^2
 \end{align}
-Taking inner product of the sides $AB$,$AD$ we get :
-\begin{align}\label{innerprod1}
-     \cos{BAD} = \frac{(\vec{A}-\vec{B})^T(\vec{A}-\vec{D})}{\norm{\vec{A}-\vec{B}}\norm{\vec{A}-\vec{D}}} 
+From $\triangle AMC$, we know that :
+\begin{align}\label{eqn1}
+    \norm{\vec{A-C}}^2 &= \norm{\vec{A-M}}^2 + \norm{\vec{M-C}}^2
 \end{align}
-Taking inner product of the sides $AC$,$AD$ we get :
-\begin{align}\label{innerprod2}
-     \cos{CAD} = \frac{(\vec{A}-\vec{C})^T(\vec{A}-\vec{D})}{\norm{\vec{A}-\vec{C}}\norm{\vec{A}-\vec{D}}} 
+Using Pythagoras theorem we can write it as:
+\begin{align}\label{eqn2}
+    &= \norm{\vec{A-D}}^2 - \norm{\vec{M-D}}^2+ \norm{\vec{M-C}}^2\\
+    &= \norm{\vec{A-D}}^2 - \norm{\vec{M-D}}^2+ \brak{\norm{\vec{M-D}} + \norm{\vec{D-C}}}^2 
 \end{align}
-Let $A = \myvec{0\\0}$, then equation \brak{\ref{innerprod1}} becomes:
-\begin{align}\label{innerprod1.1}
-     \cos{BAD} = \frac{(\vec{B})^T(\vec{D})}{\norm{\vec{B}}\norm{\vec{D}}} 
+Expanding $\brak{a+b}^2$ and solving, we get :
+\begin{align}\label{eqn3}
+   = \norm{\vec{A-D}}^2 + 2\norm{\vec{M-D}}\norm{\vec{D-C}} + \norm{\vec{D-C}}^2
 \end{align}
-Similarly, equation \brak{\ref{innerprod2}} becomes :
-\begin{align}\label{innerprod2.2}
-     \cos{CAD} = \frac{(\vec{C})^T(\vec{D})}{\norm{\vec{C}}\norm{\vec{D}}} 
+As $AD$ is a median, we can write : 
+\begin{align}\label{medianeqn}
+    \norm{\vec{B-D}} = \norm{\vec{D-C}} = \frac{\norm{\vec{B-C}}}{2}
 \end{align}
-Dividing equation \brak{\ref{innerprod1.1}} by \brak{\ref{innerprod2.2}}, we get : 
-\begin{align}\label{innerproddiv}
-     \frac{\cos{BAD}}{\cos{CAD}} = \frac{(\vec{B})^T(\vec{D})\norm{\vec{C}}\norm{\vec{D}}}{(\vec{C})^T(\vec{D})\norm{\vec{B}}\norm{\vec{D}}}
-\end{align}
-
-In a triangle that satisfies the equation \brak{\ref{givencond}}, It can be seen that the equation \brak{\ref{innerproddiv}} always equates to 1, which implies that :
-\begin{align}
-    \cos{BAD} = \cos{CAD} \implies \angle BAD = \angle CAD.
+Using \eqref{medianeqn}, we can re-write \eqref{eqn3} as
+\begin{align}\label{eqn4}
+   &= \norm{\vec{A-D}}^2 + 2\norm{\vec{M-D}}\frac{\norm{\vec{B-C}}}{2} + \norm{\frac{\vec{B-C}}{2}}^2\\
+   &=  \norm{\vec{A-D}}^2 + \norm{\vec{M-D}}\norm{\vec{B-C}} + \norm{\frac{\vec{B-C}}{2}}^2
 \end{align}
 
-Hence it is proved that $AD$ is the angle bisector of $\angle BAC$
+Hence it is proved.
 \end{document}
